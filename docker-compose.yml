@@ -6,7 +6,7 @@ services:
         image: mkodockx/docker-clamav
         
     rest-client:
-        image: lokori/clamav-rest
+        image: tracesoftware/clamav-rest
         ports:
             - "8080:8080"
         environment: 

@@ -4,14 +4,16 @@ language: java
 
 services:
   - docker
-
+  
 before_install:
- - docker pull mkodockx/docker-clamav
- - docker run -d  --name clamav-server -p 3310:3310 mkodockx/docker-clamav
- - docker pull lokori/clamav-rest
- - docker run -d -e 'CLAMD_HOST=clamav-server' -p 8080:8080 --link clamav-server:clamav-server -t -i lokori/clamav-rest
+  - docker build -t tracesoftware/clamav-rest:latest .
 
 script:
- - mvn test
- - ./testi.sh
+  - docker-compose up
+  - sleep 20
+  - mvn test
+  - ./testi.sh
 
+after_success:
+  - docker login -u="$DOCKER_LOGIN" -p="$DOCKER_PASSWORD"
+  - docker push tracesoftware/clamav-rest:latest
