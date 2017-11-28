@@ -11,13 +11,13 @@
     <version>1.4.0.RELEASE</version>
   </parent>
 
-  <groupId>fi.solita.clamav</groupId>
+  <groupId>com.tracesoftware.clamav</groupId>
   <artifactId>clamav-rest</artifactId>
   <version>1.0.2</version>  
   <packaging>jar</packaging>
   <name>Simple ClamAV proxy</name>
   <description>Simple REST proxy to put between a client and clamd server. </description>
-  <url>https://github.com/solita/clamav-rest</url>
+  <url>https://github.com/tracesoftware/clamav-rest</url>
   <licenses>
     <license>
       <name>GNU LESSER GENERAL PUBLIC LICENSE, Version 2.1</name>
@@ -31,18 +31,24 @@
       <organization>Solita</organization>
       <organizationUrl>http://www.solita.fi</organizationUrl>
     </developer>
+    <developer>
+      <name>David Ducatel</name>
+      <email>dducatel@trace-software.com</email>
+      <organization>tracesoftware</organization>
+      <organizationUrl>http://www.trace-software.com</organizationUrl>
+    </developer>
   </developers>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <start-class>fi.solita.clamav.Application</start-class>
+    <start-class>com.tracesoftware.clamav.Application</start-class>
     <java.version>1.8</java.version>
   </properties>
 
   <scm>
-    <connection>scm:git:git://github.com/solita/clamav-rest.git</connection>
-    <developerConnection>scm:git:git@github.com:solita/clamav-rest.git</developerConnection>
-    <url>https://github.com/solita/clamav-rest</url>
+    <connection>scm:git:git://github.com/tracesoftware/clamav-rest.git</connection>
+    <developerConnection>scm:git:git@github.com:tracesoftware/clamav-rest.git</developerConnection>
+    <url>https://github.com/tracesoftware/clamav-rest</url>
   </scm>
 
   <dependencies>

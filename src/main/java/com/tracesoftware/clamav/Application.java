@@ -1,4 +1,4 @@
-package fi.solita.clamav;
+package com.tracesoftware.clamav;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -39,7 +39,7 @@ public class Application {
   public static void main(String[] args) {
     SpringApplication app = new SpringApplication(Application.class);
     Map<String, Object> defaults = new HashMap<String, Object>();
-    defaults.put("clamd.host", "192.168.50.72");
+    defaults.put("clamd.host", "127.0.0.1");
     defaults.put("clamd.port", 3310);
     defaults.put("clamd.timeout", 500);
     defaults.put("clamd.maxfilesize", "20000KB");
