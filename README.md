@@ -1,6 +1,6 @@
 Simple [ClamAV](http://www.clamav.net/) REST proxy. Builds on top of [clamav-java](https://github.com/solita/clamav-java) which is a minimal Java client for ClamAV.
 
-[![Build Status](https://travis-ci.org/tracesoftware/clamav-rest.svg?branch=master)](https://travis-ci.org/tracesoftware/clamav-rest)
+[![Build Status](https://travis-ci.org/TraceSoftwareInternational/clamav-rest.svg?branch=master)](https://travis-ci.org/TraceSoftwareInternational/clamav-rest)
 
 # What is it?
 
@@ -26,7 +26,6 @@ Clamd protocol contains command such as shutdown so exposing clamd directly to e
 This is is mainly an example, not a serious production ready server. You can customize this for your specific needs. Or rewrite it using something
 other than [Spring Boot](http://projects.spring.io/spring-boot/) if you wish.
 
-
 # Usage
 
 You have two options. You can use [Docker](https://www.docker.com/) and run a [Docker image](https://hub.docker.com/r/tracesoftware/clamav-rest/) to test it. The Docker image is based on the supplied [Dockerfile specification](https://github.com/tracesoftware/clamav-rest/blob/master/Dockerfile).
@@ -41,6 +40,11 @@ Starting the REST service is quite straightforward.
 
 ```
   java -jar clamav-rest-1.0.2.jar --server.port=8765 --clamd.host=myprecious.clamd.serv.er --clamd.port=3310
+```
+
+You can also use the `docker-compose.yml` file
+```
+docker-compose up
 ```
 
 ## Setting up local clamd virtual server
